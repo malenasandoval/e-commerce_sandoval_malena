@@ -1,17 +1,22 @@
-console.log("HOLAAAAAA")
+document.querySelector('h1').textContent = 'Productos';
 
-const title1 = "SOMBRA PARA OJOS";
-const title2 = "GLOSS PARA LABIOS";
-const title3 = "SOMBRA PARA OJOS";
+const array = [];
 
-document.querySelector("#title1").innerText = title1;
-document.querySelector("#title2").innerText = title2;
-document.querySelector("#title3").innerText = title3;
+const container = document.querySelector('section.container-cards');
 
-const precio1 = "$8.300";
-const precio2 = "$6.900";
-const precio3 = "$13.900";
-document.querySelector("#precio1").innerText = precio1;
-document.querySelector("#precio2").innerText = precio2;
-document.querySelector("#precio3").innerText = precio3;
+for (let i = 1; i <= 4; i++) {
+    const card = `
+        <div class="card">
+          <img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${i}.jpg" alt="Producto ${i}" />
+          <div class="card-body">
+            <h2 id="title${i}" class="card-title">Producto ${i}</h2>
+            <h2 id="precio${i}">$precio</h2>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>  
+        </div>
+      `;
+    array.push(card);
+}
+
+container.innerHTML = array.join('');
 
