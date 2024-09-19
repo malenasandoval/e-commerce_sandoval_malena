@@ -11,11 +11,11 @@ function productos() {
           <div class="card-body">
             <h2 id="title${i}" class="card-title">Producto ${i}</h2>
             <h2 id="precio${i}">$precio</h2>
-            <a href="#" class="btn btn-primary">Ver más</a>
+            <a href="./producto.html" class="btn btn-primary">Ver más</a>
           </div>  
         </div>
       `;
-        array.push(card);
+      array.push(card);
     }
 
     document.querySelector("section").innerHTML = array.join('');
